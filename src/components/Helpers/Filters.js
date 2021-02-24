@@ -129,13 +129,6 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
 
-  @media (min-width: 768px) {
-    .content {
-      position: sticky;
-      top: 1rem;
-    }
-  }
-
   .input-wrapper {
     display: flex;
   }
