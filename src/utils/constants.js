@@ -1,5 +1,21 @@
 import React from "react";
 import { Money, Payments, Quality, Shipping } from "../assets";
+
+export const filtertitles = [
+  {
+    id: 1,
+    title: "COLLECTION",
+  },
+  {
+    id: 2,
+    title: "SIZE",
+  },
+  {
+    id: 3,
+    title: "COLOR",
+  },
+];
+
 export const navlinks = [
   {
     id: 1,
