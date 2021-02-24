@@ -3,17 +3,18 @@ import { useFilteredContext } from "../../context/useFilteredContext";
 import styled from "styled-components";
 const Sort = () => {
   const { filtered, sort, changeSort } = useFilteredContext();
+
   return (
     <Wrapper>
       <p>{filtered.length} products</p>
       <form>
-        <label htmlFor="sort">Sort</label>
+        <label htmlFor="sort">Sort:</label>
         <select
           name="sort"
           id="sort"
-          className="sort-input"
           value={sort}
           onChange={changeSort}
+          className="sort-btn"
         >
           <option value="price-lowest">Popular</option>
           <option value="price-highest">highest price</option>
@@ -33,13 +34,6 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 0.75rem;
-    .btn-container {
-      width: 50px;
-    }
-    label {
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
   }
   @media (min-width: 768px) {
     column-gap: 2rem;
@@ -49,40 +43,27 @@ const Wrapper = styled.section`
     margin-bottom: 0;
   }
 
-  .btn-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.5rem;
-    button {
-      background: transparent;
-      border: 1px solid var(--black);
-      color: var(--black);
-      width: 1.5rem;
-      border-radius: var(--radius);
-      height: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      svg {
-        font-size: 1rem;
-      }
-    }
-    .active {
-      background: var(--black);
-      color: var(--white);
+  .sort-btn {
+    border: 2px solid #d8d8d8;
+    border-radius: 5rem;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
+    :focus {
+      outline-style: none;
     }
   }
 
-  .sort-input {
-    border-color: transparent;
-    font-size: 1rem;
-    text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
-  }
   label {
-    font-size: 1rem;
-    text-transform: capitalize;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  select {
+    padding: 1rem 2rem;
   }
 `;
 
