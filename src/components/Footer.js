@@ -1,13 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import Brand from "./Helpers/Brand";
+import { ImFacebook, ImYoutube } from "react-icons/im";
+import { SiTwitter } from "react-icons/si";
+import { GrLinkedinOption } from "react-icons/gr";
+import { FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <Wrapper className="container container-center">
       <div className="brand">
+        <Brand />
         <p>
           House My Brand designs clothing for the young, the old & <br />
           everyone in between – but most importantly, for the fashionable
         </p>
+        <div className="social-medias">
+          <ImFacebook />
+          <SiTwitter />
+          <GrLinkedinOption />
+          <FaInstagram />
+          <ImYoutube />
+        </div>
       </div>
       <div className="shopping">
         <h5>Shopping online</h5>
@@ -47,6 +61,36 @@ const Wrapper = styled.footer`
     font-size: 1.2rem;
     font-weight: 200;
     line-height: 2.5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    .information,
+    .shopping {
+      display: none;
+    }
+  }
+
+  .brand {
+    display: grid;
+
+    .social-medias {
+      display: grid;
+      grid-template-columns: repeat(5, 4rem);
+      svg {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: var(--grey);
+        transition: var(--transition);
+        cursor: pointer;
+        &:hover {
+          color: var(--black);
+        }
+      }
+    }
   }
 `;
 
