@@ -27,6 +27,12 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @media only screen and (max-width: 1000px) {
+      display: grid;
+      justify-items: center;
+      margin-left: 2rem;
+    }
+
     h5 {
       margin: 0 7.5rem;
     }
@@ -34,6 +40,10 @@ const Wrapper = styled.section`
       padding: 1.5rem 3rem;
       border-radius: 5rem;
       border: 1px solid var(--light-grey);
+      @media only screen and (max-width: 1000px) {
+        padding: 0.75rem 1.5rem;
+        margin: 2rem 0;
+      }
     }
   }
 `;

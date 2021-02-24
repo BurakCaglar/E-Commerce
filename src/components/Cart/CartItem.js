@@ -54,6 +54,11 @@ const Wrapper = styled.article`
   justify-items: center;
   margin-bottom: 3rem;
   align-items: center;
+
+  @media only screen and (max-width: 350px) {
+    grid-template-columns: 200px 50px auto;
+  }
+
   .title {
     grid-template-rows: 75px;
     display: grid;
@@ -83,6 +88,12 @@ const Wrapper = styled.article`
 
   .amount-btns {
     width: 75px;
+    @media only screen and (max-width: 1000px) {
+      border: none;
+      button {
+        font-size: 0.5rem;
+      }
+    }
     button {
       width: 1rem;
       height: 0.5rem;
@@ -105,6 +116,9 @@ const Wrapper = styled.article`
     border-radius: var(--radius);
     font-size: 1.5rem;
     cursor: pointer;
+    @media only screen and (max-width: 1000px) {
+      font-size: 1rem;
+    }
   }
   @media (min-width: 776px) {
     .total-price {

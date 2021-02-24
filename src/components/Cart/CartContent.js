@@ -39,6 +39,9 @@ const Wrapper = styled.section`
     grid-template-columns: 0.4fr 1fr;
     grid-gap: 1rem;
     align-items: center;
+    @media only screen and (max-width: 1000px) {
+      margin: auto;
+    }
   }
 `;
 export default CartContent;
