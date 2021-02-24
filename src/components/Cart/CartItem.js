@@ -18,7 +18,7 @@ const CartItem = ({ id, image, title, price, number }) => {
         <img src={image} alt={title} />
         <div>
           <h5 className="name">{title}</h5>
-          <p className="color">color</p>
+          <p className="id">#{id}</p>
           <h5 className="price-small">${price}</h5>
         </div>
       </div>
@@ -74,23 +74,11 @@ const Wrapper = styled.article`
     margin-bottom: 0;
   }
 
-  .color {
-    color: var(--grey-5);
-    font-size: 0.75rem;
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    span {
-      display: inline-block;
-      width: 0.5rem;
-      height: 0.5rem;
-      background: red;
-      margin-left: 0.5rem;
-      border-radius: var(--radius);
-    }
+  .id {
+    color: var(--light-grey);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
   }
 
   .amount-btns {
@@ -136,7 +124,7 @@ const Wrapper = styled.article`
       font-weight: 400;
     }
     .name {
-      font-size: 0.85rem;
+      font-size: 1.6rem;
     }
     .color {
       font-size: 0.85rem;
