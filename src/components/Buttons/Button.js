@@ -21,6 +21,11 @@ const Wrapper = styled.button`
     padding: 0.75rem 1.5rem;
     margin: 2rem 0 0 0;
   }
+
+  @media only screen and (max-width: 360px) {
+    padding: 0.7rem 1rem;
+    margin: 1rem 0 0 0;
+  }
   :hover {
     background-color: var(--button-color);
     color: var(--white);
