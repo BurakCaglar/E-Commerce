@@ -8,9 +8,11 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Wrapper className="container container-center">
+    <Wrapper className="container-center">
       <div className="brand">
-        <Brand />
+        <div className="brand-logo">
+          <Brand />
+        </div>
         <p>
           House My Brand designs clothing for the young, the old & <br />
           everyone in between – but most importantly, for the fashionable
@@ -52,17 +54,6 @@ const Wrapper = styled.footer`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
 
-  h5 {
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  h6 {
-    font-size: 1.2rem;
-    font-weight: 200;
-    line-height: 2.5rem;
-  }
-
   @media only screen and (max-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -74,12 +65,39 @@ const Wrapper = styled.footer`
     }
   }
 
+  @media only screen and (max-width: 300px) {
+    grid-template-columns: auto;
+    justify-items: center;
+    .contact {
+      display: none;
+    }
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+  }
+
   .brand {
     display: grid;
+
+    @media only screen and (max-width: 300px) {
+      text-align: center;
+      .brand-logo {
+        margin: 0 auto 2rem auto;
+      }
+    }
 
     .social-medias {
       display: grid;
       grid-template-columns: repeat(5, 4rem);
+
       svg {
         margin-top: 1rem;
         font-size: 2rem;
@@ -89,6 +107,12 @@ const Wrapper = styled.footer`
         &:hover {
           color: var(--black);
         }
+      }
+      @media only screen and (max-width: 300px) {
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
       }
     }
   }
