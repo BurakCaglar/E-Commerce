@@ -41,6 +41,10 @@ const CartItem = ({ id, image, title, price, number }) => {
 };
 
 const Wrapper = styled.article`
+  @media only screen and (max-width: 350px) {
+    display: flex;
+    flex-direction: column;
+  }
   .total-price {
     display: none;
   }
@@ -55,10 +59,6 @@ const Wrapper = styled.article`
   margin-bottom: 3rem;
   align-items: center;
 
-  @media only screen and (max-width: 350px) {
-    grid-template-columns: 200px 50px auto;
-  }
-
   .title {
     grid-template-rows: 75px;
     display: grid;
@@ -66,6 +66,13 @@ const Wrapper = styled.article`
     align-items: center;
     text-align: left;
     gap: 1rem;
+    @media only screen and (max-width: 350px) {
+      display: flex;
+      flex-direction: column;
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
   }
   img {
     width: 7rem;
@@ -89,7 +96,6 @@ const Wrapper = styled.article`
   .amount-btns {
     width: 75px;
     @media only screen and (max-width: 1000px) {
-      border: none;
       button {
         font-size: 0.5rem;
       }
@@ -117,7 +123,7 @@ const Wrapper = styled.article`
     font-size: 1.5rem;
     cursor: pointer;
     @media only screen and (max-width: 1000px) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
   @media (min-width: 776px) {
