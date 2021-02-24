@@ -38,32 +38,29 @@ const Wrapper = styled.section`
     margin: 4rem auto;
     display: grid;
     gap: 6.5rem;
+
     img {
       height: 225px;
       margin: auto;
     }
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
   }
 
   h3 {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.8rem;
+    @media only screen and (max-width: 340px) {
+      font-size: 1.5rem;
+    }
   }
 
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .btn {
-    display: block;
-    width: 148px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  @media (min-width: 576px) {
-    .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
   }
 `;
 
