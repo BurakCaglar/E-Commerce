@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
 import Product from "./Product";
-import Button from "../Buttons/Button";
+import { Button } from "../Buttons/Button";
 
 const SampleProducts = () => {
   const {

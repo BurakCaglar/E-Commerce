@@ -109,22 +109,22 @@ const Wrapper = styled.article`
   @media (min-width: 776px) {
     .total-price {
       display: block;
-      margin-bottom: 0;
       color: var(--grey);
+      font-size: 1.3rem;
       font-weight: 400;
-      font-size: 1rem;
     }
     .price-small {
       display: none;
     }
     .price {
       display: block;
-      font-size: 1rem;
-
-      font-weight: 400;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--grey);
     }
     .name {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 300;
     }
     .color {
       font-size: 0.85rem;
