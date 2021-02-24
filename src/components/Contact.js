@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import img from "../assets/contact-background.svg";
-import Button from "./Buttons/Button";
+import { ButtonV2 } from "./Buttons/Button";
 const Contact = () => {
   return (
     <Wrapper>
@@ -18,9 +18,7 @@ const Contact = () => {
                 className="form-input"
                 placeholder="Enter your email"
               />
-              <button type="submit" className="submit-btn">
-                <Button buttonName={"SUBSCRIBE"} />
-              </button>
+              <ButtonV2 buttonName={"SUBSCRIBE"} />
             </form>
           </div>
         </div>
@@ -41,7 +39,7 @@ const Wrapper = styled.section`
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 13rem;
+
     align-items: center;
 
     h3 {
