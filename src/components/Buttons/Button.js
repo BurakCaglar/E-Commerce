@@ -16,6 +16,11 @@ const Wrapper = styled.button`
   background: transparent;
   transition: var(--transition);
   cursor: pointer;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 0.75rem 1.5rem;
+    margin: 2rem 0 0 0;
+  }
   :hover {
     background-color: var(--button-color);
     color: var(--white);
@@ -35,6 +40,11 @@ const WrapperV2 = styled.button`
   cursor: pointer;
   background-color: var(--button-color);
   color: var(--white);
+
+  @media only screen and (max-width: 1000px) {
+    padding: 0.75rem 1.5rem;
+    margin: 2rem 0 0 0;
+  }
 
   :hover {
     background: var(--white);
