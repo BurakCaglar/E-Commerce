@@ -30,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
 
 html {
   font-size: 10px;
+  @media only screen and (max-width: 300px) {
+        font-size: 8px;
+      }
 }
 body {
   font-family: 'Poppins', sans-serif;
