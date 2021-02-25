@@ -43,9 +43,8 @@ const Sidebar = () => {
           })}
         </ul>
       </aside>
-      <ChatWidget/>
+      <ChatWidget />
     </SidebarContainer>
-    
   );
 };
 

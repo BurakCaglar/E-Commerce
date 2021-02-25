@@ -66,6 +66,15 @@ const Wrapper = styled.section`
   img {
     width: 100vw;
     height: 100vh;
+    @media (max-width: 800px) {
+      height: 70vh;
+    }
+    @media (max-width: 500px) {
+      height: 50vh;
+    }
+    @media (max-width: 350px) {
+      height: 40vh;
+    }
   }
   .image::after {
     content: "";
