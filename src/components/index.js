@@ -1,6 +1,6 @@
 import SampleProducts from "./Products/SampleProducts";
 import Navbar from "./Navbar&Sidebar/Navbar";
-import CartButtons from "./Cart/CartButtons";
+import CartButtons from "./Buttons/Navbar&SidebarButtons";
 import Footer from "./Footer";
 import Sidebar from "./Navbar&Sidebar/Sidebar";
 import TopSlider from "./TopSlider";

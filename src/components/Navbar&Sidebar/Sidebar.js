@@ -5,7 +5,7 @@ import { useProductsContext } from "../../context/useProductsContext";
 import { FaTimes } from "react-icons/fa";
 import { navlinks } from "../../utils/constants";
 import styled from "styled-components";
-import CartButtons from "../Cart/CartButtons";
+import { CartButtons } from "../../components";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();

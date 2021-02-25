@@ -12,10 +12,10 @@ const CartButtons = () => {
   return (
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn" onClick={() => closeSidebar()}>
-        <span className="cart-container">
+        <div className="cart-container">
           <AiOutlineShoppingCart />
           <span className="cart-value">{totalProducts}</span>
-        </span>
+        </div>
       </Link>
       <button type="button" className="login-btn">
         <AiOutlineUserAdd />
@@ -43,21 +43,27 @@ const Wrapper = styled.div`
     align-items: center;
     position: relative;
     svg {
-      height: 2.2rem;
+      position: relative;
+      font-size: 2.5rem;
+    }
+    &:hover {
+      color: black;
     }
   }
   .cart-value {
     position: absolute;
-    top: -10px;
-    right: -19px;
-    width: 16px;
-    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    top: -1rem;
+    right: -1.5rem;
+    width: 1rem;
+    height: 1rem;
     font-size: 1.5rem;
-    color: orange;
-    padding: 12px;
+    color: white;
+    padding: 11px;
+    background-color: #dd1e31;
+    border-radius: 5rem;
   }
   .login-btn {
     display: flex;
@@ -68,7 +74,10 @@ const Wrapper = styled.div`
     color: var(--grey);
     letter-spacing: var(--spacing);
     svg {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+    }
+    &:hover {
+      color: black;
     }
   }
 `;

@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { navlinks } from "../../utils/constants";
-import CartButtons from "../Cart/CartButtons";
+import { CartButtons } from "../../components";
 import { useProductsContext } from "../../context/useProductsContext";
 
 const Nav = () => {
@@ -17,7 +17,7 @@ const Nav = () => {
           <Link to="/" className="brand">
             <img src={logo} alt="logo" />
             <p>
-              <span style={{ color: "orange", fontSize: "1.6rem" }}>E</span>
+              <span style={{ color: "orange", fontSize: "2rem" }}>E</span>
               -Shop
             </p>
           </Link>
@@ -70,13 +70,13 @@ const NavContainer = styled.nav`
       align-items: center;
 
       p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 300;
       }
 
       img {
-        width: 4.5rem;
-        height: 3.5rem;
+        width: 5.5rem;
+        height: 4.5rem;
         margin-right: 2rem;
       }
     }
@@ -87,7 +87,8 @@ const NavContainer = styled.nav`
     color: var(--black);
     cursor: pointer;
     svg {
-      font-size: 2rem;
+      margin-top: 1rem;
+      font-size: 3.5rem;
     }
   }
   .nav-links {
