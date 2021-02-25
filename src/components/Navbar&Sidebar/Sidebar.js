@@ -5,7 +5,7 @@ import { useProductsContext } from "../../context/useProductsContext";
 import { FaTimes } from "react-icons/fa";
 import { navlinks } from "../../utils/constants";
 import styled from "styled-components";
-import { CartButtons } from "../../components";
+import { NavbarSidebarButtons } from "../../components";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -19,7 +19,7 @@ const Sidebar = () => {
           <img src={logo} alt="logo" className="logo" />
           <div className="sidebar-right">
             <div className="cart-buttons">
-              <CartButtons />
+              <NavbarSidebarButtons />
             </div>
             <button
               className="close-btn"

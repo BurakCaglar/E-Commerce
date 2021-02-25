@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo-white.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { navlinks } from "../../utils/constants";
 import { NavbarSidebarButtons } from "../../components";
 import { useProductsContext } from "../../context/useProductsContext";
 
-const Navbar = () => {
+const NavbarV2 = () => {
   const { openSidebar } = useProductsContext();
 
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link to="/" className="brand">
             <img src={logo} alt="logo" />
             <p>
-              <span style={{ color: "orange", fontSize: "2rem" }}>E</span>
+              <span style={{ color: "#fff", fontSize: "2rem" }}>E</span>
               -Shop
             </p>
           </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
           })}
         </ul>
         <span className="cart-buttons">
-          <NavbarSidebarButtons />
+          <NavbarSidebarButtons buttonColor="white" />
         </span>
       </div>
     </NavContainer>
@@ -50,10 +50,11 @@ const Navbar = () => {
 };
 
 const NavContainer = styled.nav`
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 5rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
 
   .nav-center {
     width: 90vw;
@@ -72,6 +73,7 @@ const NavContainer = styled.nav`
       p {
         font-size: 2rem;
         font-weight: 300;
+        color: #fff;
       }
 
       img {
@@ -116,6 +118,7 @@ const NavContainer = styled.nav`
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
+        color: #fff;
       }
     }
   }
@@ -127,4 +130,4 @@ const NavContainer = styled.nav`
   }
 `;
 
-export default Navbar;
+export default NavbarV2;
