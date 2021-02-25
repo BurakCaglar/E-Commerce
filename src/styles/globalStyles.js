@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --light-grey: #d1cdcd;
   --white: #fff;
   --button-color: #FBB03B;
-  --transition: all 0.3s linear;
+  --transition: all 0.3s ease-out;
   --spacing: 0.12rem;
   --radius: 0.3rem;
   --max-width: 1280px;
@@ -42,6 +42,7 @@ body {
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
