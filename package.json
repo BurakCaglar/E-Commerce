@@ -14,12 +14,8 @@
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-<<<<<<< HEAD
     "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
-=======
-    "react-chat-widget": "^3.0.5",
->>>>>>> ef8f13a913f9f2242d404cb5f6e98aa92ae810f1
     "stripe": "^8.130.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
