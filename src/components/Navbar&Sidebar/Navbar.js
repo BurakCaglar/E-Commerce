@@ -115,8 +115,8 @@ const NavContainer = styled.nav`
   }
 
   .cart-buttons {
-    display: none;
     @media (max-width: 992px) {
+      display: none;
     }
   }
 `;
