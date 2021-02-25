@@ -36,7 +36,9 @@ const Nav = () => {
             );
           })}
         </ul>
-        <CartButtons />
+        <span className="cart-buttons">
+          <CartButtons />
+        </span>
       </div>
     </NavContainer>
   );
@@ -109,6 +111,12 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
       }
+    }
+  }
+
+  .cart-buttons {
+    display: none;
+    @media (max-width: 992px) {
     }
   }
 `;
