@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo-white.svg";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../../context/useProductsContext";
 import { FaTimes } from "react-icons/fa";
@@ -17,26 +17,30 @@ const Sidebar = () => {
       >
         <div className="sidebar-header">
           <img src={logo} alt="logo" className="logo" />
-          <button
-            className="close-btn"
-            type="button"
-            onClick={() => closeSidebar()}
-          >
-            <FaTimes />
-          </button>
+          <div className="sidebar-right">
+            <div className="cart-buttons">
+              <CartButtons />
+            </div>
+            <button
+              className="close-btn"
+              type="button"
+              onClick={() => closeSidebar()}
+            >
+              <FaTimes />
+            </button>
+          </div>
         </div>
         <ul className="links">
           {navlinks.map(({ id, text, url }) => {
             return (
               <li key={id}>
                 <Link to={url} onClick={() => closeSidebar()}>
-                  {text}
+                  <h5>{text}</h5>
                 </Link>
               </li>
             );
           })}
         </ul>
-        <CartButtons />
       </aside>
     </SidebarContainer>
   );
@@ -59,10 +63,14 @@ const SidebarContainer = styled.div`
     color: var(--white);
     cursor: pointer;
     margin-top: 0.2rem;
+    &:hover {
+      color: var(--grey);
+    }
+    &:focus {
+      color: var(--grey);
+    }
   }
-  .close-btn:hover {
-    color: var(--grey);
-  }
+
   .logo {
     justify-self: center;
     height: 45px;
@@ -72,7 +80,7 @@ const SidebarContainer = styled.div`
   }
   .links a {
     display: block;
-    text-align: left;
+    text-align: right;
     font-size: 1rem;
     text-transform: capitalize;
     padding: 0.6rem 1.5rem;
@@ -107,6 +115,21 @@ const SidebarContainer = styled.div`
     .sidebar {
       display: none;
     }
+  }
+
+  .cart-buttons {
+    display: grid;
+    float: right;
+    svg {
+      color: var(--white);
+    }
+  }
+  .sidebar-right {
+    display: flex;
+  }
+
+  h5 {
+    font-size: 1.7rem;
   }
 `;
 
