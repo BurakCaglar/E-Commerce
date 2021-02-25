@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import {
-  Widget,
-  addResponseMessage
-} from "react-chat-widget";
+import { Widget, addResponseMessage } from "react-chat-widget";
+import styled from "styled-components";
 
 import "react-chat-widget/lib/styles.css";
 
@@ -16,15 +14,21 @@ function ChatWidget() {
   };
 
   return (
-    <div className="App">
+    <Wrapper className="App chat">
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         //profileAvatar={logo}
         title="Ask us!"
         subtitle="You can write..."
       />
-    </div>
+    </Wrapper>
   );
 }
 
-export default ChatWidget; 
+export default ChatWidget;
+
+const Wrapper = styled.div`
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
