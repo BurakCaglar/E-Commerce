@@ -16,7 +16,10 @@ const Nav = () => {
         <div className="nav-header">
           <Link to="/" className="brand">
             <img src={logo} alt="logo" />
-            <p>E-Shop</p>
+            <p>
+              <span style={{ color: "orange", fontSize: "1.6rem" }}>E</span>
+              -Shop
+            </p>
           </Link>
           <button
             type="button"
@@ -31,7 +34,9 @@ const Nav = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link to={url}>
+                  <h5>{text}</h5>
+                </Link>
               </li>
             );
           })}
