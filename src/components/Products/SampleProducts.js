@@ -5,6 +5,7 @@ import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
 import Product from "./Product";
 import { Button } from "../Buttons/Button";
+import { Link } from "react-router-dom";
 
 const SampleProducts = () => {
   const {
@@ -22,7 +23,10 @@ const SampleProducts = () => {
     <Wrapper className="container container-center">
       <div className="header">
         <h3>Selected just for you</h3>
-        <Button buttonName={"SHOW MORE"} />
+        <Link to = "/products">
+          <Button buttonName={"SHOW MORE"} />
+        </Link>
+
       </div>
       <div className="container-center gallery">
         {sampleProducts.map((product) => {
