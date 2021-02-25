@@ -6,6 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { navlinks } from "../../utils/constants";
 import styled from "styled-components";
 import { NavbarSidebarButtons } from "../../components";
+import ChatWidget from "../../components/ChatWidget";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -42,7 +43,9 @@ const Sidebar = () => {
           })}
         </ul>
       </aside>
+      <ChatWidget/>
     </SidebarContainer>
+    
   );
 };
 
