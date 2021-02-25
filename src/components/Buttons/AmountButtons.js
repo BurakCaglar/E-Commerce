@@ -30,7 +30,7 @@ const Wrapper = styled.div`
     font-weight: 600;
   }
   .amount {
-    padding: 1.3rem 2rem;
+    padding: 1rem 1.7rem;
   }
   h2 {
     margin-bottom: 0;

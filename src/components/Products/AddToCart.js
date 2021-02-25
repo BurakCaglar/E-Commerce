@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/useCartContext";
 import AmountButtons from "../Buttons/AmountButtons";
+import { ButtonV2 } from "../Buttons/Button";
 
 const AddToCart = ({ singleProduct }) => {
   const { addToCart } = useCartContext();
@@ -26,7 +27,7 @@ const AddToCart = ({ singleProduct }) => {
 
   return (
     <Wrapper>
-      <div className="">
+      <div className="buttons">
         <AmountButtons
           number={number}
           increaseNumber={increaseNumber}
@@ -34,15 +35,23 @@ const AddToCart = ({ singleProduct }) => {
         />
         <Link
           to="/cart"
-          className=""
+          className="button"
           onClick={() => addToCart(id, singleProduct, number)}
         >
-          add to cart
+          <ButtonV2 buttonName="ADD TO CART" />
         </Link>
       </div>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  .buttons {
+    display: flex;
+    margin: 5rem 0;
+    .button {
+      margin-left: 2rem;
+    }
+  }
+`;
 export default AddToCart;

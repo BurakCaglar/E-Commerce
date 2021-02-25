@@ -65,7 +65,7 @@ const Wrapper = styled.footer`
     }
   }
 
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 400px) {
     grid-template-columns: auto;
     justify-items: center;
     .contact {
@@ -87,7 +87,7 @@ const Wrapper = styled.footer`
   .brand {
     display: grid;
 
-    @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: 400px) {
       text-align: center;
       .brand-logo {
         margin: 0 auto 2rem auto;
@@ -108,7 +108,7 @@ const Wrapper = styled.footer`
           color: var(--black);
         }
       }
-      @media only screen and (max-width: 300px) {
+      @media only screen and (max-width: 400px) {
         grid-template-columns: repeat(5, 1fr);
         justify-items: center;
         margin-top: 2rem;
