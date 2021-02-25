@@ -1,6 +1,6 @@
 import SampleProducts from "./Products/SampleProducts";
 import Navbar from "./Navbar&Sidebar/Navbar";
-import CartButtons from "./Buttons/Navbar&SidebarButtons";
+import NavbarSidebarButtons from "./Buttons/NavbarSidebarButtons";
 import Footer from "./Footer";
 import Sidebar from "./Navbar&Sidebar/Sidebar";
 import TopSlider from "./TopSlider";
@@ -17,7 +17,7 @@ import Breadcrumb from "./Breadcrumb";
 export {
   SampleProducts,
   Navbar,
-  CartButtons,
+  NavbarSidebarButtons,
   Footer,
   Sidebar,
   TopSlider,

@@ -6,25 +6,29 @@ import { Home, Products, SingleProduct, Cart, Checkout, Error } from "./pages";
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <Sidebar />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/cart">
+          <Navbar />
           <Cart />
         </Route>
         <Route exact path="/products">
+          <Navbar />
           <Products />
         </Route>
         <Route exact path="/products/:id">
+          <Navbar />
           <SingleProduct />
         </Route>
         <Route exact path="/checkout">
+          <Navbar />
           <Checkout />
         </Route>
         <Route path="*">
+          <Navbar />
           <Error />
         </Route>
       </Switch>
