@@ -95,8 +95,8 @@ h1 {
   }
 }
 
-.page-100 {
-  min-height: calc(100vh - 10rem);
+.page-70 {
+  min-height: 70vh;
   padding: 5rem 0;
 }
 .page {
