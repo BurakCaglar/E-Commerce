@@ -11,9 +11,9 @@ const CartPage = () => {
   return (
     <>
       {cart.length > 0 ? (
-        <main className="">
+        <main className="page">
           <Breadcrumb title="cart" />
-          <Wrapper className="page">
+          <Wrapper>
             <CartContent />
           </Wrapper>
         </main>

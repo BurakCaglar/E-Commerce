@@ -99,6 +99,10 @@ h1 {
   min-height: 70vh;
   padding: 5rem 0;
 }
+.page-100 {
+  min-height: 100vh;
+  padding: 5rem 0;
+}
 .page {
   min-height: calc(100vh - (20vh + 10rem));
 }
