@@ -37,5 +37,11 @@ const Wrapper = styled.article`
     color: var(--black);
     font-size: 1.5rem;
   }
+
+  @media (max-width: 1000px) {
+    footer {
+      text-align: center;
+    }
+  }
 `;
 export default Product;
