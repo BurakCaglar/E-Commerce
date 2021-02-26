@@ -1,5 +1,13 @@
 import React from "react";
-import { Money, Payments, Quality, Shipping } from "../assets";
+import {
+  Money,
+  Payments,
+  Quality,
+  Shipping,
+  FooterImg1,
+  FooterImg2,
+  FooterImg3,
+} from "../assets";
 
 export const filtertitles = [
   {
@@ -13,6 +21,27 @@ export const filtertitles = [
   {
     id: 3,
     title: "COLOR",
+  },
+];
+
+export const sliderFooterInfo = [
+  {
+    id: 1,
+    title: "Free Shipping",
+    description: "On purchases over $199",
+    icon: <FooterImg1 />,
+  },
+  {
+    id: 1,
+    title: "99% Satisfied Customers",
+    description: "Our clients' opinions speak for themselves",
+    icon: <FooterImg2 />,
+  },
+  {
+    id: 1,
+    title: "Originality Guaranteed",
+    description: "30 days warranty for each product from our store",
+    icon: <FooterImg3 />,
   },
 ];
 
