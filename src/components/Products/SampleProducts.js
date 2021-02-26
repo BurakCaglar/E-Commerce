@@ -68,8 +68,8 @@ const SampleProducts = () => {
       <Slider className="container-center gallery" {...settings}>
         {sampleProducts.map((product) => {
           return (
-            <div>
-              <Product key={product.id} {...product} />
+            <div key={product.id}>
+              <Product {...product} />
             </div>
           );
         })}
