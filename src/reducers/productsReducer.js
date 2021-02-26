@@ -7,7 +7,7 @@ const productsReducer = (state, action) => {
     case "FETCH_PRODUCTS_START":
       return { ...state, productsLoading: true };
     case "FETCH_PRODUCTS_SUCCES":
-      const getSampleProducts = action.payload.slice(0, 4).map((product) => {
+      const getSampleProducts = action.payload.slice(0, 8).map((product) => {
         return product;
       });
       return {
