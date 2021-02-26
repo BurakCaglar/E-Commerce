@@ -50,6 +50,9 @@ const Wrapper = styled.div`
     svg {
       position: relative;
       font-size: 3rem;
+      &:hover {
+        color: black;
+      }
     }
     &:hover {
       color: black;
@@ -80,6 +83,9 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     svg {
       font-size: 3rem;
+      &:hover {
+        color: black;
+      }
     }
     &:hover {
       color: black;
