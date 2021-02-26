@@ -1,9 +1,9 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
 import { useFilteredContext } from "../../context/useFilteredContext";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import FiltersContainer from "./FiltersContainer";
-import { filtertitles, navlinks } from "../../utils/constants";
+import { filtertitles } from "../../utils/constants";
 
 const Filters = () => {
   const {
@@ -19,6 +19,19 @@ const Filters = () => {
 
   const categories = nonRepeatingValues(all, "category");
 
+  const [state, setOpen] = useState({ productType: true, price: true });
+
+  const toggleHandler = (e) => {
+    const id = e.currentTarget.id;
+
+    if (id === "product-type-icon") {
+      setOpen({ ...state, productType: !state.productType });
+    }
+    if (id === "price-icon") {
+      setOpen({ ...state, price: !state.price });
+    }
+  };
+
   return (
     <Wrapper>
       <div className="content">
@@ -26,9 +39,20 @@ const Filters = () => {
           {/* categories */}
           <div className="form-control">
             <div className="header">
-              <h5>PRODUCT TYPE</h5> <MdKeyboardArrowUp />
+              <h5>PRODUCT TYPE</h5>{" "}
+              <div className="icon-box">
+                <MdKeyboardArrowUp
+                  id="product-type-icon"
+                  onClick={toggleHandler}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
             </div>
-            <div className="category-list">
+            <div
+              className={`${
+                state.productType ? "category-list" : "category-list none"
+              }`}
+            >
               <span className="input-wrapper">
                 <input
                   key={0}
@@ -60,27 +84,42 @@ const Filters = () => {
           </div>
           {/* categories filter end */}
           {/* price filter start */}
-          <div className="form-control">
-            <div className="header">
-              <h5>PRICE</h5> <MdKeyboardArrowUp />
+          <form onSubmit={(event) => event.preventDefault()}>
+            <div className="form-control">
+              <div className="header">
+                <h5>PRICE</h5>
+                <div className="icon-box">
+                  <MdKeyboardArrowUp
+                    id="price-icon"
+                    onClick={toggleHandler}
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+              </div>
+              <div
+                className={`${
+                  state.price ? "price-content" : "price-content none"
+                }`}
+              >
+                <p className="price">${Math.ceil(price)}</p>
+                <input
+                  type="range"
+                  name="price"
+                  min={minPrice}
+                  max={Math.ceil(maxPrice)}
+                  value={price}
+                  onChange={changeFilters}
+                />
+              </div>
             </div>
-            <p className="price">${Math.ceil(price)}</p>
-            <input
-              type="range"
-              name="price"
-              min={minPrice}
-              max={Math.ceil(maxPrice)}
-              value={price}
-              onChange={changeFilters}
-            />
-          </div>
-          {/* price filter end */}
-          <div>
-            {filtertitles.map((item) => {
-              const { id, title } = item;
-              return <FiltersContainer title={title} />;
-            })}
-          </div>
+            {/* price filter end */}
+            <div>
+              {filtertitles.map((item) => {
+                const { id, title } = item;
+                return <FiltersContainer key={id} title={title} />;
+              })}
+            </div>
+          </form>
         </form>
       </div>
     </Wrapper>
@@ -118,6 +157,10 @@ const Wrapper = styled.section`
   .category-list {
     display: flex;
     flex-direction: column;
+  }
+
+  .none {
+    display: none;
   }
   .search-input {
     padding: 0.5rem;
