@@ -71,13 +71,13 @@ const Wrapper = styled.section`
         border-radius: 5rem;
         border: none;
         margin-right: 3rem;
+        padding-left: 3.5rem;
         @media only screen and (max-width: 1000px) {
           width: 15rem;
           height: 3.3rem;
           margin: 1rem 0 0 0;
         }
         ::placeholder {
-          padding-left: 3.5rem;
           @media only screen and (max-width: 1000px) {
             padding-left: 2rem;
           }
