@@ -106,8 +106,10 @@ const ImageWrapper = styled.section`
     }
   }
   .image-wrapper {
-    width: 47rem;
-    height: 47rem;
+    display: flex;
+    justify-content: center;
+    width: 35rem;
+    height: 35rem;
     @media (max-width: 620px) {
       width: 30rem;
       height: 30rem;
