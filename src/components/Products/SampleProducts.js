@@ -6,8 +6,46 @@ import Loading from "../Helpers/Loading";
 import Product from "./Product";
 import { Button } from "../Buttons/Button";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import nextArrow from "../../assets/slider/next-arrow.svg";
+import prevArrow from "../../assets/slider/prev-arrow.svg";
 
 const SampleProducts = () => {
+  var settings = {
+    infinite: true,
+    speed: 750,
+    autoplay: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const {
     productsLoading,
     productsError,
@@ -23,16 +61,19 @@ const SampleProducts = () => {
     <Wrapper className="container container-center">
       <div className="header">
         <h3>Selected just for you</h3>
-        <Link to = "/products">
+        <Link to="/products">
           <Button buttonName={"SHOW MORE"} />
         </Link>
-
       </div>
-      <div className="container-center gallery">
+      <Slider className="container-center gallery" {...settings}>
         {sampleProducts.map((product) => {
-          return <Product key={product.id} {...product} />;
+          return (
+            <div>
+              <Product key={product.id} {...product} />
+            </div>
+          );
         })}
-      </div>
+      </Slider>
     </Wrapper>
   );
 };
@@ -65,6 +106,28 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .slick-prev:before {
+      display: none;
+    }
+    .slick-next:before {
+      display: none;
+    }
+  }
+
+  .slick-prev:before {
+    content: url(${prevArrow});
+    transform: rotate(180deg);
+    color: red;
+    font-size: 30px;
+  }
+
+  .slick-next:before {
+    content: url(${nextArrow});
+    color: red;
+    font-size: 30px;
   }
 `;
 
