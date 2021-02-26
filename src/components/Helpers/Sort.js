@@ -6,7 +6,6 @@ const Sort = () => {
 
   return (
     <Wrapper>
-      <p>{filtered.length} products</p>
       <form>
         <label htmlFor="sort">Sort:</label>
         <select
@@ -29,7 +28,7 @@ const Sort = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   @media (max-width: 576px) {
     display: grid;
     grid-template-columns: 1fr;
