@@ -8,7 +8,9 @@ const Brand = () => {
     <Wrapper>
       <Link to="/" className="brand2">
         <img src={logo} alt="logo" />
-        <p>E-Shop</p>
+        <p>
+          <span style={{ color: "orange" }}>E</span>-Shop
+        </p>
       </Link>
     </Wrapper>
   );
