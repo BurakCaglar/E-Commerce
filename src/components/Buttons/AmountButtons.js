@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  border: 2px solid var(--light-grey);
+  border: 1px solid var(--light-grey);
   border-radius: 5rem;
   opacity: 0.7;
   h4 {

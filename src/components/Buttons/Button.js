@@ -22,7 +22,7 @@ export const ButtonOnSlider = ({ buttonName }) => {
 
 const Wrapper = styled.button`
   padding: 1.5rem 3.2rem;
-  border: 2px solid #d8d8d8;
+  border: 1px solid #d8d8d8;
   border-radius: 5rem;
   background: transparent;
   transition: var(--transition);
@@ -40,7 +40,7 @@ const Wrapper = styled.button`
   :hover {
     background-color: var(--button-color);
     color: var(--white);
-    border: 2px solid transparent;
+    border: 1px solid transparent;
   }
 
   :focus {
@@ -50,7 +50,7 @@ const Wrapper = styled.button`
 
 const WrapperV2 = styled.button`
   padding: 1.5rem 3.2rem;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 5rem;
   transition: var(--transition);
   cursor: pointer;
@@ -65,7 +65,7 @@ const WrapperV2 = styled.button`
   :hover {
     background: var(--white);
     color: var(--grey);
-    border: 2px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
   }
 
   :focus {
@@ -82,6 +82,14 @@ const WrapperOnSlider = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--white);
+      svg {
+        color: var(--black);
+      }
+    }
 
     svg {
       font-size: 2.5rem;
