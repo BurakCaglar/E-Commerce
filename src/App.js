@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar, Sidebar, Footer } from "./components";
+import { Navbar, Sidebar, Footer, Contact, SampleProducts } from "./components";
 import { Home, Products, SingleProduct, Cart, Checkout, Error } from "./pages";
 
 const App = () => {
@@ -18,10 +18,13 @@ const App = () => {
         <Route exact path="/products">
           <Navbar />
           <Products />
+          <Contact />
         </Route>
         <Route exact path="/products/:id">
           <Navbar />
           <SingleProduct />
+          <SampleProducts />
+          <Contact />
         </Route>
         <Route exact path="/checkout">
           <Navbar />
