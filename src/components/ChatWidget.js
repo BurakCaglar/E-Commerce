@@ -7,7 +7,8 @@ import "react-chat-widget/lib/styles.css";
 
 function ChatWidget() {
   useEffect(() => {
-    addResponseMessage("Welcome to this awesome chat!");
+    addResponseMessage("Welcome to Customer Services!!");
+    addResponseMessage("How can I help you?");
   }, []);
 
   const handleNewUserMessage = (newMessage) => {
