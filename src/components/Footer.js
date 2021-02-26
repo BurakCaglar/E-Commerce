@@ -53,7 +53,7 @@ const Footer = () => {
       <FooterWrapper>
         <div className="contributor-footer container-center">
           <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
-          <a href="https://github.com/BurakCaglar/E-Commerce">
+          <a href="https://github.com/BurakCaglar/E-Commerce" target="_blank">
             <p>GITHUB REPO</p>
           </a>
           <div className="contributor-content">
@@ -62,7 +62,7 @@ const Footer = () => {
               {contributors.map((contributor) => {
                 const { id, name, url } = contributor;
                 return (
-                  <a key={id} href={url}>
+                  <a key={id} href={url} target="_blank">
                     <p>{name}</p>
                   </a>
                 );
