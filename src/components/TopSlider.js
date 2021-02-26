@@ -6,7 +6,6 @@ import styled from "styled-components";
 import image1 from "../assets/slider/slider-image-1.jpg";
 import image2 from "../assets/slider/slider-image-2.jpg";
 import image3 from "../assets/slider/slider-image-3.jpg";
-import { HiOutlineArrowRight } from "react-icons/hi";
 import nextArrow from "../assets/slider/next-arrow.svg";
 
 export default class TopSlider extends Component {
