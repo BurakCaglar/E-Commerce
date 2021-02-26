@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { whyChoose } from "../utils/constants";
 const WhyChoose = () => {
   return (
-    <>
+    <div className="margin-section">
       <h2
         style={{
           textAlign: "center",
@@ -26,7 +26,7 @@ const WhyChoose = () => {
           );
         })}
       </Wrapper>
-    </>
+    </div>
   );
 };
 
