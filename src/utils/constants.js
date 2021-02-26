@@ -99,16 +99,16 @@ export const contributors = [
   {
     id: 1,
     name: "Abdülkadir Aslan",
-    url: "https://github.com/gurhangursoy",
+    url: "https://github.com/akadiraslan",
   },
   {
     id: 2,
     name: "Burak Çağlar",
-    url: "https://github.com/akadiraslan",
+    url: "https://github.com/BurakCaglar",
   },
   {
     id: 3,
     name: "Gürhan Gürsoy",
-    url: "https://github.com/BurakCaglary",
+    url: "https://github.com/gurhangursoy",
   },
 ];

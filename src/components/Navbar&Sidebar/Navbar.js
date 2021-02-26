@@ -25,7 +25,7 @@ const Navbar = () => {
   });
 
   const handleScroll = () => {
-    if (window.pageYOffset > 140) {
+    if (window.pageYOffset > 50) {
       if (!state.nav) {
         setState({ nav: true });
       }
