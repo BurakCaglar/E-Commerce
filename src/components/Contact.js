@@ -27,6 +27,8 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
+  margin-bottom: 5rem;
+
   .background {
     background-image: url(${img});
     background-position: center;
