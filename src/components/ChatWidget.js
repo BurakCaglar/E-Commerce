@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import styled from "styled-components";
+import logo from "../assets/customer-service.svg";
 
 import "react-chat-widget/lib/styles.css";
 
@@ -17,7 +18,7 @@ function ChatWidget() {
     <Wrapper className="App chat">
       <Widget
         handleNewUserMessage={handleNewUserMessage}
-        //profileAvatar={logo}
+        profileAvatar={logo}
         title="Ask us!"
         subtitle="You can write..."
       />
