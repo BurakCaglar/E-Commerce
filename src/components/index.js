@@ -14,6 +14,10 @@ import ProductList from "./Products/ProductList";
 import Sort from "./Helpers/Sort";
 import CartContent from "./Cart/CartContent";
 import Breadcrumb from "./Breadcrumb";
+import SliderFooter from "./SliderFooter";
+import SliderFooterInfo from "./SliderFooterInfo";
+import SliderHeadline from "./SliderHeadline";
+
 export {
   SampleProducts,
   Navbar,
@@ -21,6 +25,9 @@ export {
   Footer,
   Sidebar,
   TopSlider,
+  SliderFooter,
+  SliderFooterInfo,
+  SliderHeadline,
   WhyChoose,
   Contact,
   Loading,
