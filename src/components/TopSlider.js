@@ -23,7 +23,6 @@ export default class TopSlider extends Component {
   }
   render() {
     const settings = {
-      dots: true,
       fade: true,
       infinite: true,
       speed: 1000,
@@ -37,14 +36,13 @@ export default class TopSlider extends Component {
           <div className="image">
             <img src={image1} alt="" />
           </div>
-          <div>
+          <div className="image">
             <img src={image2} alt="" />
           </div>
-          <div>
+          <div className="image">
             <img src={image3} alt="" />
           </div>
         </Slider>
-        <div className="slider-footer">aa</div>
       </Wrapper>
     );
   }
@@ -56,7 +54,7 @@ const Wrapper = styled.section`
   }
   .slick-prev {
     left: 0;
-    z-index: 500;
+    z-index: 1;
   }
   /* .slick-next:before {
     content: url(${nextArrow});
@@ -66,9 +64,10 @@ const Wrapper = styled.section`
   img {
     width: 100vw;
     height: 100vh;
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       height: 70vh;
     }
+
     @media (max-width: 500px) {
       height: 50vh;
     }
@@ -76,17 +75,16 @@ const Wrapper = styled.section`
       height: 40vh;
     }
   }
-  .image::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 5%);
-  }
-
-  .slider-footer {
-    position: absolute;
+  .image {
+    position: relative;
+    ::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 5%);
+    }
   }
 `;
