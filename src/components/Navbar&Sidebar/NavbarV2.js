@@ -127,6 +127,9 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         color: #fff;
+        &:hover {
+          color: orange;
+        }
       }
     }
   }

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { navlinks } from "../../utils/constants";
 import { NavbarSidebarButtons } from "../../components";
 import { useProductsContext } from "../../context/useProductsContext";
+import Brand from "../Helpers/Brand";
 
 const Navbar = () => {
   const { openSidebar } = useProductsContext();
@@ -15,11 +15,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/" className="brand">
-            <img src={logo} alt="logo" />
-            <p>
-              <span style={{ color: "orange", fontSize: "2rem" }}>E</span>
-              -Shop
-            </p>
+            <Brand />
           </Link>
           <button
             type="button"
@@ -54,6 +50,10 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .active-class {
+    color: blue;
+  }
 
   .nav-center {
     width: 90vw;
@@ -116,6 +116,12 @@ const NavContainer = styled.nav`
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
+        &:hover {
+          color: orange;
+        }
+        &:focus {
+          color: orange;
+        }
       }
     }
   }
