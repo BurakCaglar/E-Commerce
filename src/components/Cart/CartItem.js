@@ -28,7 +28,7 @@ const CartItem = ({ id, image, title, price, number }) => {
         increaseNumber={increaseNumber}
         decreaseNumber={decreaseNumber}
       />
-      <h5 className="total-price">${price * number}</h5>
+      <h5 className="total-price">${(price * number).toFixed(2)}</h5>
       <button
         type="button"
         className="remove-btn"

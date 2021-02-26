@@ -2,10 +2,10 @@ const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
       const { id, number, singleProduct } = action.payload;
-      const tempItem = state.cart.find((i) => i.id === id + number);
+      const tempItem = state.cart.find((i) => i.id === id);
       if (tempItem) {
         const tempCart = state.cart.map((cartItem) => {
-          if (cartItem.id === id + number) {
+          if (cartItem.id === id) {
             let newNumber = cartItem.number + number;
             return { ...cartItem, number: newNumber };
           } else {
@@ -16,7 +16,7 @@ const cartReducer = (state, action) => {
         return { ...state, cart: tempCart };
       } else {
         const newItem = {
-          id: id + number,
+          id: id,
           title: singleProduct.title,
           image: singleProduct.image,
           price: singleProduct.price,
