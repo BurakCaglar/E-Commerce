@@ -51,11 +51,11 @@ const Wrapper = styled.div`
       position: relative;
       font-size: 3rem;
       &:hover {
-        color: black;
+        color: black !important;
       }
     }
     &:hover {
-      color: black;
+      color: black !important;
     }
   }
   .cart-value {
@@ -84,11 +84,11 @@ const Wrapper = styled.div`
     svg {
       font-size: 3rem;
       &:hover {
-        color: black;
+        color: black !important;
       }
     }
     &:hover {
-      color: black;
+      color: black !important;
     }
   }
 `;
