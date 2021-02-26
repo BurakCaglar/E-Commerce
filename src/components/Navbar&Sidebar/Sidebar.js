@@ -17,7 +17,12 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-          <img src={logo} alt="logo" className="logo" />
+          <div className="brand-info">
+            <img src={logo} alt="logo" className="logo" />
+            <h4>
+              <span>E</span>-Shop
+            </h4>
+          </div>
           <div className="sidebar-right">
             <div className="cart-buttons">
               <NavbarSidebarButtons />
@@ -56,15 +61,31 @@ const SidebarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+
+    .brand-info {
+      display: flex;
+      align-items: center;
+
+      h4 {
+        color: var(--white);
+        margin-left: 2rem;
+        font-weight: 300;
+        letter-spacing: var(--spacing);
+      }
+
+      span {
+        color: orange;
+      }
+    }
   }
   .close-btn {
-    font-size: 2rem;
+    font-size: 3rem;
     background: transparent;
     border-color: transparent;
     transition: var(--transition);
     color: var(--white);
     cursor: pointer;
-    margin-top: 0.2rem;
+    margin-top: 0.7rem;
     &:hover {
       color: var(--grey);
     }
@@ -76,6 +97,9 @@ const SidebarContainer = styled.div`
   .logo {
     justify-self: center;
     height: 45px;
+    @media (max-width: 500px) {
+      height: 35px;
+    }
   }
   .links {
     margin-bottom: 2rem;

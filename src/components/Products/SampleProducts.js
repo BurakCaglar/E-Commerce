@@ -109,6 +109,11 @@ const Wrapper = styled.section`
   }
 
   @media only screen and (max-width: 500px) {
+    .slick-arrow {
+      display: none;
+      width: 0px;
+      height: 0px;
+    }
     .slick-prev:before {
       display: none;
     }
