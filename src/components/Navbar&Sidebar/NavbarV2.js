@@ -50,7 +50,7 @@ const NavbarV2 = () => {
 };
 
 const NavContainer = styled.nav`
-  top: 5rem;
+  top: 2.5rem;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -80,17 +80,24 @@ const NavContainer = styled.nav`
         width: 5.5rem;
         height: 4.5rem;
         margin-right: 2rem;
+        @media (max-width: 400px) {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
       }
     }
   }
   .nav-toggle {
     background: transparent;
     border: none;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
     svg {
       margin-top: 1rem;
       font-size: 3.5rem;
+      @media (max-width: 400px) {
+        font-size: 3rem;
+      }
     }
   }
   .nav-links {
@@ -98,6 +105,7 @@ const NavContainer = styled.nav`
   }
 
   @media (min-width: 992px) {
+    top: 5rem;
     .nav-toggle {
       display: none;
     }

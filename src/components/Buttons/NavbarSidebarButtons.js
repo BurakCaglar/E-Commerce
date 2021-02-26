@@ -39,16 +39,17 @@ const Wrapper = styled.div`
     font-size: 2.2rem;
     letter-spacing: var(--spacing);
     display: flex;
-
     align-items: center;
+    margin-right: 2.5rem;
   }
   .cart-container {
     display: flex;
     align-items: center;
     position: relative;
+
     svg {
       position: relative;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     &:hover {
       color: black;
@@ -78,7 +79,7 @@ const Wrapper = styled.div`
     color: var(--grey);
     letter-spacing: var(--spacing);
     svg {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     &:hover {
       color: black;
