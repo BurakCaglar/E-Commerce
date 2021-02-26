@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { HiArrowRight } from "react-icons/hi";
 
 export const Button = ({ buttonName }) => {
   return <Wrapper>{buttonName}</Wrapper>;
@@ -7,6 +8,16 @@ export const Button = ({ buttonName }) => {
 
 export const ButtonV2 = ({ buttonName }) => {
   return <WrapperV2>{buttonName}</WrapperV2>;
+};
+
+export const ButtonOnSlider = ({ buttonName }) => {
+  return (
+    <WrapperOnSlider>
+      <div className="slider-btn">
+        <HiArrowRight />
+      </div>
+    </WrapperOnSlider>
+  );
 };
 
 const Wrapper = styled.button`
@@ -59,5 +70,38 @@ const WrapperV2 = styled.button`
 
   :focus {
     outline-style: none;
+  }
+`;
+
+const WrapperOnSlider = styled.div`
+  .slider-btn {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    background-color: var(--button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 4rem;
+      height: 4rem;
+      svg {
+        font-size: 2.1rem;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 3rem;
+      height: 3rem;
+      svg {
+        font-size: 1.8rem;
+      }
+    }
   }
 `;
