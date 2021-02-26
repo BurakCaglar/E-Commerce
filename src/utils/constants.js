@@ -32,13 +32,13 @@ export const sliderFooterInfo = [
     icon: <FooterImg1 />,
   },
   {
-    id: 1,
+    id: 2,
     title: "99% Satisfied Customers",
     description: "Our clients' opinions speak for themselves",
     icon: <FooterImg2 />,
   },
   {
-    id: 1,
+    id: 3,
     title: "Originality Guaranteed",
     description: "30 days warranty for each product from our store",
     icon: <FooterImg3 />,
@@ -48,17 +48,17 @@ export const sliderFooterInfo = [
 export const navlinks = [
   {
     id: 1,
+    text: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
     text: "Men",
     url: "/products",
   },
   {
-    id: 2,
-    text: "Women",
-    url: "/products",
-  },
-  {
     id: 3,
-    text: "Kids",
+    text: "Women",
     url: "/products",
   },
 ];
@@ -92,5 +92,23 @@ export const whyChoose = [
     title: "Finest Quality",
     text:
       "Designed to last, each of our products has been crafted with the finest materials.",
+  },
+];
+
+export const contributors = [
+  {
+    id: 1,
+    name: "Abdülkadir Aslan",
+    url: "https://github.com/gurhangursoy",
+  },
+  {
+    id: 2,
+    name: "Burak Çağlar",
+    url: "https://github.com/akadiraslan",
+  },
+  {
+    id: 3,
+    name: "Gürhan Gürsoy",
+    url: "https://github.com/BurakCaglary",
   },
 ];
