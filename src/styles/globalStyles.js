@@ -103,6 +103,9 @@ h1 {
   min-height: calc(100vh - (20vh + 10rem));
 }
 
+.margin-section {
+  margin: 6em auto;
+}
 
 
 
