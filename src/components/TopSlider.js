@@ -28,6 +28,8 @@ export default class TopSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
+      dots: false,
+      arrows: false,
     };
     return (
       <Wrapper>
