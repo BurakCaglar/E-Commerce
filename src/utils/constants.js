@@ -104,7 +104,7 @@ export const contributors = [
   {
     id: 2,
     name: "Burak Çağlar",
-    url: "hhttps://www.linkedin.com/in/caaglarburak/",
+    url: "https://www.linkedin.com/in/caaglarburak/",
   },
   {
     id: 3,
