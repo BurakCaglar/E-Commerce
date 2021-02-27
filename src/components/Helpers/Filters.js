@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import styled from "styled-components";
 import { useFilteredContext } from "../../context/useFilteredContext";
-import { MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import FiltersContainer from "./FiltersContainer";
 import { filtertitles } from "../../utils/constants";
 
@@ -41,11 +41,19 @@ const Filters = () => {
             <div className="header">
               <h5>PRODUCT TYPE</h5>{" "}
               <div className="icon-box">
-                <MdKeyboardArrowUp
-                  id="product-type-icon"
-                  onClick={toggleHandler}
-                  style={{ cursor: "pointer" }}
-                />
+                {state.productType ? (
+                  <MdKeyboardArrowUp
+                    id="product-type-icon"
+                    onClick={toggleHandler}
+                    style={{ cursor: "pointer" }}
+                  />
+                ) : (
+                  <MdKeyboardArrowDown
+                    id="product-type-icon"
+                    onClick={toggleHandler}
+                    style={{ cursor: "pointer" }}
+                  />
+                )}
               </div>
             </div>
             <div
@@ -89,11 +97,19 @@ const Filters = () => {
               <div className="header">
                 <h5>PRICE</h5>
                 <div className="icon-box">
-                  <MdKeyboardArrowUp
-                    id="price-icon"
-                    onClick={toggleHandler}
-                    style={{ cursor: "pointer" }}
-                  />
+                  {state.price ? (
+                    <MdKeyboardArrowUp
+                      id="price-icon"
+                      onClick={toggleHandler}
+                      style={{ cursor: "pointer" }}
+                    />
+                  ) : (
+                    <MdKeyboardArrowDown
+                      id="price-icon"
+                      onClick={toggleHandler}
+                      style={{ cursor: "pointer" }}
+                    />
+                  )}
                 </div>
               </div>
               <div
