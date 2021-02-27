@@ -17,13 +17,16 @@ const NavbarSidebarButtons = ({ buttonColor }) => {
           <span className="cart-value">{totalProducts}</span>
         </div>
       </Link>
-      <button
-        type="button"
-        style={{ color: `${buttonColor}` }}
-        className="login-btn"
-      >
-        <AiOutlineUserAdd />
-      </button>
+      <Link to="/login">
+        <button
+          type="button"
+          style={{ color: `${buttonColor}` }}
+          className="login-btn"
+          onClick={() => closeSidebar()}
+        >
+          <AiOutlineUserAdd />
+        </button>
+      </Link>
     </Wrapper>
   );
 };
@@ -83,6 +86,7 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     svg {
       font-size: 3rem;
+
       &:hover {
         color: black !important;
       }
