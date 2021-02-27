@@ -12,7 +12,7 @@ const CartPage = () => {
     <>
       {cart.length > 0 ? (
         <main className="page">
-          <Breadcrumb title="cart" />
+          <Breadcrumb title="Cart" />
           <Wrapper>
             <CartContent />
           </Wrapper>
