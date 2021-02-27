@@ -76,11 +76,9 @@ const Wrapper = styled.section`
           width: 15rem;
           height: 3.3rem;
           margin: 1rem 0 0 0;
+          padding-left: 1rem;
         }
         ::placeholder {
-          @media only screen and (max-width: 1000px) {
-            padding-left: 2rem;
-          }
         }
       }
 
