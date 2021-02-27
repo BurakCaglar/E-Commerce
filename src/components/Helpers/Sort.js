@@ -43,7 +43,7 @@ const Wrapper = styled.section`
   }
 
   .sort-btn {
-    border: 2px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
     border-radius: 5rem;
     background: transparent;
     cursor: pointer;
@@ -63,6 +63,8 @@ const Wrapper = styled.section`
 
   select {
     padding: 1rem 2rem;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: var(--spacing);
   }
 `;
 
