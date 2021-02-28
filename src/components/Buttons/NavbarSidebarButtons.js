@@ -14,7 +14,9 @@ const NavbarSidebarButtons = ({ buttonColor }) => {
       <Link to="/cart" className="cart-btn" onClick={() => closeSidebar()}>
         <div className="cart-container" style={{ color: `${buttonColor}` }}>
           <AiOutlineShoppingCart />
-          <span className="cart-value">{totalProducts}</span>
+          {totalProducts > 0 && (
+            <span className="cart-value">{totalProducts}</span>
+          )}
         </div>
       </Link>
       <Link to="/login">
@@ -54,11 +56,11 @@ const Wrapper = styled.div`
       position: relative;
       font-size: 3rem;
       &:hover {
-        color: black !important;
+        color: var(--button-color);
       }
     }
     &:hover {
-      color: black !important;
+      color: var(--button-color);
     }
   }
   .cart-value {
@@ -88,11 +90,11 @@ const Wrapper = styled.div`
       font-size: 3rem;
 
       &:hover {
-        color: black !important;
+        color: var(--button-color);
       }
     }
     &:hover {
-      color: black !important;
+      color: var(--button-color);
     }
   }
 `;
