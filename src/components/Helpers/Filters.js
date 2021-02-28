@@ -4,6 +4,7 @@ import { useFilteredContext } from "../../context/useFilteredContext";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import FiltersContainer from "./FiltersContainer";
 import { filtertitles } from "../../utils/constants";
+import tick from "../../assets/tick.svg";
 
 const Filters = () => {
   const {
@@ -198,7 +199,7 @@ const Wrapper = styled.section`
   }
 
   input[type="radio"]:checked {
-    background: url("https://www.flaticon.com/svg/vstatic/svg/63/63659.svg?token=exp=1614187634~hmac=2b4fcc6700c8a5f4aecca4bc9fe220e0");
+    background: url(${tick});
     background-repeat: no-repeat;
     background-position: center;
     background-size: 9px 9px;
