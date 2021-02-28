@@ -69,7 +69,7 @@ const Navbar = () => {
               })}
             </ul>
             <span className="cart-buttons">
-              <NavbarSidebarButtons />
+              <NavbarSidebarButtons hover="orange" />
             </span>
           </div>
         </NavContainer>
@@ -97,9 +97,11 @@ const NavBarSticky = styled.nav`
     padding: 0.5rem 0;
     width: 100%;
     a,
-    svg,
     p {
       color: var(--white) !important;
+    }
+    svg {
+      color: var(--white);
     }
   }
 `;
