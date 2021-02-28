@@ -15,7 +15,7 @@ const LoginPage = () => {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s
           </p>
-          <form className="login-form">
+          <div className="login-form">
             <input
               type="email"
               name="email"
@@ -29,7 +29,7 @@ const LoginPage = () => {
               placeholder="Password"
             />
             <ButtonV2 buttonName="Sign in" />
-          </form>
+          </div>
         </div>
       </Wrapper>
     </>

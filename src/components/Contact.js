@@ -12,14 +12,14 @@ const Contact = () => {
               Subscribe to our newsletter and <br />
               receive exclusive offers every week
             </h3>
-            <form className="contact-form">
+            <div className="contact-form">
               <input
                 type="email"
                 className="form-input"
                 placeholder="Enter your email"
               />
               <ButtonV2 buttonName={"SUBSCRIBE"} />
-            </form>
+            </div>
           </div>
         </div>
       </div>
