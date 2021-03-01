@@ -50,6 +50,9 @@ const Wrapper = styled.div`
   h2 {
     margin-bottom: 0;
   }
+
+  @media screen and (width: 1000px) {
+  }
 `;
 
 export default AmountButtons;
