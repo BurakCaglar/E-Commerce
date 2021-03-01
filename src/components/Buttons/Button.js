@@ -27,15 +27,16 @@ const Wrapper = styled.button`
   background: transparent;
   transition: var(--transition);
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 
   @media only screen and (max-width: 1000px) {
     padding: 0.75rem 1.5rem;
-    margin: 2rem 0 0 0;
   }
 
   @media only screen and (max-width: 360px) {
-    padding: 0.7rem 1rem;
-    margin: 1rem 0 0 0;
+    padding: 0.5rem 0.7rem;
+
+    font-size: 1.3rem;
   }
   :hover {
     background-color: var(--button-color);
@@ -46,21 +47,17 @@ const Wrapper = styled.button`
   :focus {
     outline-style: none;
   }
+
+  :active {
+    background-color: var(--white);
+    color: var(--button-color);
+  }
 `;
 
-const WrapperV2 = styled.button`
-  padding: 1.5rem 3.2rem;
+const WrapperV2 = styled(Wrapper)`
   border: 1px solid transparent;
-  border-radius: 5rem;
-  transition: var(--transition);
-  cursor: pointer;
-  background-color: var(--button-color);
   color: var(--white);
-
-  @media only screen and (max-width: 1000px) {
-    padding: 0.75rem 1.5rem;
-    margin: 2rem 0 0 0;
-  }
+  background-color: var(--button-color);
 
   :hover {
     background: var(--white);
@@ -68,8 +65,9 @@ const WrapperV2 = styled.button`
     border: 1px solid #d8d8d8;
   }
 
-  :focus {
-    outline-style: none;
+  :active {
+    background-color: var(--button-color);
+    color: var(--white);
   }
 `;
 
