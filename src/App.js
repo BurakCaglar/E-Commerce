@@ -10,44 +10,47 @@ import {
   Error,
   LoginPage,
 } from "./pages";
+import ScrollIntoView from "./utils/ScrollIntoView";
 
 const App = () => {
   return (
     <Router>
-      <Sidebar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/cart">
-          <Navbar />
-          <Cart />
-        </Route>
-        <Route exact path="/products">
-          <Navbar />
-          <Products />
-          <Contact />
-        </Route>
-        <Route exact path="/products/:id">
-          <Navbar />
-          <SingleProduct />
-          <SampleProducts />
-          <Contact />
-        </Route>
-        <Route exact path="/checkout">
-          <Navbar />
-          <Checkout />
-        </Route>
-        <Route exact path="/login">
-          <Navbar />
-          <LoginPage />
-        </Route>
-        <Route path="*">
-          <Navbar />
-          <Error />
-        </Route>
-      </Switch>
-      <Footer />
+      <ScrollIntoView>
+        <Sidebar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/cart">
+            <Navbar />
+            <Cart />
+          </Route>
+          <Route exact path="/products">
+            <Navbar />
+            <Products />
+            <Contact />
+          </Route>
+          <Route exact path="/products/:id">
+            <Navbar />
+            <SingleProduct />
+            <SampleProducts />
+            <Contact />
+          </Route>
+          <Route exact path="/checkout">
+            <Navbar />
+            <Checkout />
+          </Route>
+          <Route exact path="/login">
+            <Navbar />
+            <LoginPage />
+          </Route>
+          <Route path="*">
+            <Navbar />
+            <Error />
+          </Route>
+        </Switch>
+        <Footer />
+      </ScrollIntoView>
     </Router>
   );
 };
