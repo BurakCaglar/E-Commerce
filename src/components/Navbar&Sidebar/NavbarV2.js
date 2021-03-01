@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo-white.svg";
 import { FaBars } from "react-icons/fa";
@@ -8,58 +8,122 @@ import { NavbarSidebarButtons } from "../../components";
 import { useProductsContext } from "../../context/useProductsContext";
 
 const NavbarV2 = () => {
-  const { openSidebar } = useProductsContext();
+  const { openSidebar, closeSidebar } = useProductsContext();
+
+  const [state, setState] = useState({
+    nav: false,
+  });
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 50) {
+      if (!state.nav) {
+        setState({ nav: true });
+      }
+    } else {
+      if (state.nav) {
+        setState({ nav: false });
+      }
+    }
+  };
 
   return (
-    <NavContainer>
-      <div className="nav-center">
-        <div className="nav-header">
-          <Link to="/" className="brand">
-            <img src={logo} alt="logo" />
-            <p>
-              <span style={{ color: "#fff", fontSize: "2rem" }}>E</span>
-              -Shop
-            </p>
-          </Link>
-          <button
-            type="button"
-            className="nav-toggle"
-            onClick={() => openSidebar()}
-          >
-            <FaBars />
-          </button>
-        </div>
-        <ul className="nav-links">
-          {navlinks.map((link) => {
-            const { id, text, url } = link;
-            return (
-              <li key={id}>
-                <Link to={url}>
-                  <h5>{text}</h5>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <span className="cart-buttons">
-          <NavbarSidebarButtons buttonColor="white" />
-        </span>
+    <NavBarSticky>
+      <div className={state.nav ? "nav nav-black" : "nav position"}>
+        <NavContainer>
+          <div className={`nav-center ${state.nav && "nav-maximum"}`}>
+            <div className="nav-header">
+              <Link to="/" className="brand">
+                <img src={logo} alt="logo" />
+                <p>
+                  <span style={{ color: "orange", fontSize: "2rem" }}>E</span>
+                  -Shop
+                </p>
+              </Link>
+              <button
+                type="button"
+                className="nav-toggle"
+                onClick={() => openSidebar()}
+              >
+                <FaBars />
+              </button>
+            </div>
+            <ul className="nav-links">
+              {navlinks.map((link) => {
+                const { id, text, url } = link;
+                return (
+                  <li key={id}>
+                    <Link to={url}>
+                      <h5>{text}</h5>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <span className="cart-buttons">
+              <NavbarSidebarButtons buttonColor="white" />
+            </span>
+          </div>
+        </NavContainer>
       </div>
-    </NavContainer>
+    </NavBarSticky>
   );
 };
 
-const NavContainer = styled.nav`
+const NavBarSticky = styled.nav`
   top: 2.5rem;
-  position: absolute;
   width: 100%;
   text-align: center;
   z-index: 1;
+
+  /* Sticky Navbar */
+  .nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    transition: var(--transition);
+  }
+  .nav-black {
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 0;
+    width: 100%;
+    a,
+    p {
+      color: var(--white);
+    }
+    svg {
+      color: var(--white);
+    }
+  }
+
+  .absolute {
+    position: absolute;
+  }
+`;
+
+const NavContainer = styled.nav`
+  /* Sticky Navbar */
+
+  .nav-maximum {
+    max-width: 95% !important;
+  }
+
+  /* Sticky Navbar */
 
   .nav-center {
     width: 90vw;
     margin: 0 auto;
     max-width: var(--max-width);
+    transition: all 0.5s linear;
   }
   .nav-header {
     display: flex;
