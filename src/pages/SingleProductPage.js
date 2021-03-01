@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 import { useProductsContext } from "../context/useProductsContext";
 
 import { Loading, Error, AddToCart, Breadcrumb } from "../components";
 import styled from "styled-components";
+import { ButtonV2 } from "../components/Buttons/Button";
 
 const SingleProductPage = () => {
   const { id } = useParams();
@@ -70,6 +71,8 @@ const Wrapper = styled.main`
     display: grid;
     gap: 4rem;
     margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
   }
   .price {
   }
@@ -81,6 +84,7 @@ const Wrapper = styled.main`
     .product-center {
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      text-align: left;
     }
     .price {
       font-size: 1.7rem;
@@ -113,6 +117,7 @@ const ImageWrapper = styled.section`
     @media (max-width: 620px) {
       width: 30rem;
       height: 30rem;
+      margin: auto;
     }
     img {
       height: 100%;
