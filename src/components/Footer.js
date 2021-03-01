@@ -80,6 +80,8 @@ const FooterWrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
   .contributor-footer {
     display: flex;
     flex-direction: column;
