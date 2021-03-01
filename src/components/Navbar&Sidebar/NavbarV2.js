@@ -86,9 +86,11 @@ const NavBarSticky = styled.nav`
   .nav {
     position: fixed;
     width: 100%;
-    top: 5rem;
     z-index: 5;
     transition: var(--transition);
+    @media (min-width: 1000px) {
+      top: 5rem;
+    }
   }
   .nav-black {
     top: 0;
