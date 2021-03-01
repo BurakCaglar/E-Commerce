@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AmountButtons from "../Buttons/AmountButtons";
 import { FaTimes } from "react-icons/fa";
 import { useCartContext } from "../../context/useCartContext";
+import { Link } from "react-router-dom";
 
 const CartItem = ({ id, image, title, price, number }) => {
   const { removeItem, toggleNumber } = useCartContext();
@@ -15,9 +16,13 @@ const CartItem = ({ id, image, title, price, number }) => {
   return (
     <Wrapper>
       <div className="title">
-        <img src={image} alt={title} />
+        <Link to={`/products/${id}`}>
+          <img src={image} alt={title} />
+        </Link>
         <div>
-          <h5 className="name">{title}</h5>
+          <Link to={`/products/${id}`}>
+            <h5 className="name">{title}</h5>{" "}
+          </Link>
           <p className="id">#{id}</p>
           <h5 className="price-small">${price}</h5>
         </div>
