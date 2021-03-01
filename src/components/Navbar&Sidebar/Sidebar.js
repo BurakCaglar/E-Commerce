@@ -109,10 +109,6 @@ const SidebarContainer = styled.div`
     color: var(--white);
     transition: var(--transition);
     letter-spacing: var(--spacing);
-
-    &:active {
-      display: none;
-    }
   }
 
   .links a:hover {
