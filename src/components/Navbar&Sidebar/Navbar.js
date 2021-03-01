@@ -93,7 +93,7 @@ const NavBarSticky = styled.nav`
   }
   .nav-black {
     z-index: 2;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     padding: 0.5rem 0;
     width: 100%;
     a,
