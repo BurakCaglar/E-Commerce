@@ -29,24 +29,24 @@ const Footer = () => {
         </div>
         <div className="shopping">
           <h5>Shopping online</h5>
-          <h6>Order Status</h6>
-          <h6>Shipping and Delivery</h6>
-          <h6>Returns</h6>
-          <h6>Payment Options</h6>
-          <h6>Contact Us</h6>
+          <a>Order Status</a>
+          <a>Shipping and Delivery</a>
+          <a>Returns</a>
+          <a>Payment Options</a>
+          <a>Contact Us</a>
         </div>
         <div className="information">
           <h5>Information</h5>
-          <h6>Gift Cards</h6>
-          <h6>Find a store</h6>
-          <h6>Newsletter</h6>
-          <h6>Bacome a member</h6>
-          <h6>Site feedback</h6>
+          <a>Gift Cards</a>
+          <a>Find a store</a>
+          <a>Newsletter</a>
+          <a>Bacome a member</a>
+          <a>Site feedback</a>
         </div>
         <div className="contact">
           <h5>Contact</h5>
-          <h6>store@uikit.com</h6>
-          <h6>Hotline: +1 131 138 138</h6>
+          <a>store@uikit.com</a>
+          <a>Hotline: +1 131 138 138</a>
         </div>
       </Wrapper>
       <hr />
@@ -147,6 +147,12 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     font-weight: 200;
     line-height: 2.5rem;
+  }
+  a {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    display: block;
   }
 
   .brand {
