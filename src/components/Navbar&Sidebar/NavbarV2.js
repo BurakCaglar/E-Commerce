@@ -78,7 +78,6 @@ const NavbarV2 = () => {
 };
 
 const NavBarSticky = styled.nav`
-  top: 2.5rem;
   width: 100%;
   text-align: center;
   z-index: 1;
@@ -87,11 +86,12 @@ const NavBarSticky = styled.nav`
   .nav {
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 5rem;
     z-index: 5;
     transition: var(--transition);
   }
   .nav-black {
+    top: 0;
     z-index: 5;
     background: rgba(0, 0, 0, 0.7);
     padding: 0.5rem 0;
