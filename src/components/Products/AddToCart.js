@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/useCartContext";
 import AmountButtons from "../Buttons/AmountButtons";
-import { ButtonV2 } from "../Buttons/Button";
+import { Button, ButtonV2 } from "../Buttons/Button";
 
 const AddToCart = ({ singleProduct }) => {
   const { addToCart } = useCartContext();
@@ -33,13 +33,17 @@ const AddToCart = ({ singleProduct }) => {
           increaseNumber={increaseNumber}
           decreaseNumber={decreaseNumber}
         />
-        <Link
-          to="/cart"
-          className="button"
-          onClick={() => addToCart(id, singleProduct, number)}
-        >
-          <ButtonV2 buttonName="ADD TO CART" />
-        </Link>
+        <div className="buttons-wrapper">
+          <div
+            className="button"
+            onClick={() => addToCart(id, singleProduct, number)}
+          >
+            <ButtonV2 buttonName="ADD TO CART" />
+          </div>
+          <Link className="button" to="/cart">
+            <Button buttonName="GO TO CART" />
+          </Link>
+        </div>
       </div>
     </Wrapper>
   );
@@ -49,6 +53,19 @@ const Wrapper = styled.section`
   .buttons {
     display: flex;
     margin: 5rem 0;
+
+    @media (max-width: 1053px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      @media (max-width: 1053px) {
+        margin-top: 2rem;
+      }
+    }
     .button {
       margin-left: 2rem;
     }
