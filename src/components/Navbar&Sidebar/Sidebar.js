@@ -17,12 +17,6 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-          <div className="brand-info">
-            <img src={logo} alt="logo" className="logo" />
-            <h4>
-              <span>E</span>-Shop
-            </h4>
-          </div>
           <div className="sidebar-right">
             <div className="cart-buttons">
               <NavbarSidebarButtons />
@@ -58,7 +52,8 @@ const SidebarContainer = styled.div`
 
   .sidebar-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    transform: translateX(-21%);
     align-items: center;
     padding: 1rem 1.5rem;
 
@@ -103,16 +98,21 @@ const SidebarContainer = styled.div`
   }
   .links {
     margin-bottom: 2rem;
+    transform: translateX(-21%);
   }
   .links a {
     display: block;
     text-align: right;
     font-size: 1rem;
     text-transform: capitalize;
-    padding: 0.6rem 1.5rem;
+    padding: 1rem 1.5rem;
     color: var(--white);
     transition: var(--transition);
     letter-spacing: var(--spacing);
+
+    &:active {
+      display: none;
+    }
   }
 
   .links a:hover {
@@ -122,16 +122,16 @@ const SidebarContainer = styled.div`
   .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: var(--black);
     transition: var(--transition);
-    transform: translate(-100%);
+    transform: translate(100%);
     z-index: -1;
   }
   .show-sidebar {
-    transform: translate(0);
+    transform: translate(20%);
     z-index: 999;
   }
   .cart-btn-wrapper {
