@@ -24,7 +24,7 @@ const SampleProducts = () => {
         breakpoint: 1500,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -33,7 +33,7 @@ const SampleProducts = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -61,7 +61,8 @@ const SampleProducts = () => {
     <Wrapper className="container container-center">
       <div className="header">
         <h3>Selected just for you</h3>
-        <Link to="/products">
+
+        <Link className="show-more-btn" to="/products">
           <Button buttonName={"SHOW MORE"} />
         </Link>
       </div>
@@ -106,6 +107,8 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .show-more-btn {
+    }
   }
 
   @media only screen and (max-width: 500px) {
