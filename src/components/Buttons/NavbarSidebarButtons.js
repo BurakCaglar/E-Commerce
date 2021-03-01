@@ -74,7 +74,7 @@ const Wrapper = styled.div`
     height: 1rem;
     font-size: 1.5rem;
     color: white;
-    padding: 11px;
+    padding: 1.1rem;
     background-color: #dd1e31;
     border-radius: 5rem;
   }
