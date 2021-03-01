@@ -29,6 +29,7 @@ const CartItem = ({ id, image, title, price, number }) => {
       </div>
       <h5 className="price">${price}</h5>
       <AmountButtons
+        id = {id}
         number={number}
         increaseNumber={increaseNumber}
         decreaseNumber={decreaseNumber}

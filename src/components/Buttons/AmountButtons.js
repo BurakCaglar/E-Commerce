@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { useCartContext } from "../../context/useCartContext";
 
-const AmountButtons = ({ number, increaseNumber, decreaseNumber }) => {
+const AmountButtons = ({ id, number, increaseNumber, decreaseNumber }) => {
+  const { removeItem } = useCartContext();
   return (
     <Wrapper className="amount-btns">
-      <button type="button" className="amount-btn" onClick={decreaseNumber}>
+      <button type="button" className="amount-btn" onClick={number === 0 ? removeItem(id) : decreaseNumber}>
+        {/* when number decrease to zero item should be removed */}
         <FaMinus />
       </button>
       <h4 className="amount">{number}</h4>
